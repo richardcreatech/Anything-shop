@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    cursor: cell;
+}
+
+body::-webkit-scrollbar{display: none;}
+
+header{
+    /* height: 10rem; */
+    position: sticky;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1%;
+    align-items: center;
+}
+
+
+header ul:nth-of-type(1){
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1em 2em;
+}
+
+header ul:nth-of-type(1):hover{
+    background-color: #d5d5d5;
+}
+
+header ul:nth-of-type(1):active{
+    background-color: #d5d5d5b6;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #eee;
+}
+
+#username{
+    font-size: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header ul:nth-of-type(2){
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+header ul:nth-of-type(2) #clear-cart{
+    padding: 1rem 2rem;
+}
+
+
+header ul:nth-of-type(2) a{
+    color: black;
+    text-decoration: none;
+}
+
+header ul:nth-of-type(2) a:hover{text-decoration: underline;}
+
+main{
+    /* main */
+    width: 100%;
+    height: 100%;
+}
+
+
+main #inner-main{
+    width: 100%;
+    height: 100%;
+}
+
+main #inner-main #welcomeBanner{
+    display: flex;
+    gap: 10% ;
+    align-items: center;
+    justify-content: center;
+    background-color: #251f47;
+    color: white;
+}
+
+
+
+@media(max-width: 1000px){
+main #inner-main #welcomeBanner 
+{
+    padding: 3%;
+    flex-direction: column-reverse;
+}
+}
+
+
+#sec-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5%;
+    flex-direction: column;
+}
+
+#sec-1 #stats{
+    font-family: sans-serif;
+    display: flex;
+    width: 70%;
+    gap: 10%;
+    justify-content: space-around;
+    height: 50%;
+}
+
+#sec-1 #stats p{
+    color: rgba(0, 0, 0, 0.351);
+}
+
+
+#sec-1 #stats #sum-of-items , #sec-1 #stats #no-of-items
+{
+    background-color: white;
+    width: 100%;
+    padding: 5% 2.5%;
+}
+
+#sec-2{
+    display: flex;
+    width: 100%;
+    padding: 0.5%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#productSection{align-items: center;
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(3 , 3fr);
+    background-color: #fff;
+    padding: 10%;
+}
+
+
+@media(max-width: 1000px)
+{
+    #productSection
+    {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+#productSection .item{
+    /* background-color: #00000023; */
+    width: fit-content;
+    padding: 5%;
+    /* margin: 10%; */
+    display: flex;
+    border-radius: 2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#productSection .item img{width: 10em;}
+
+.add_to_cart{
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    border: none;
+    border-radius: 23em;
+    color: #ee3;
+    margin: 2%;
+    transition: all 0.2s linear;
+}
+
+.add_to_cart:hover{
+    background-color: #ee3
+    ;
+    color: black;
+}
+.add_to_cart:active{
+    background-color: #eee
+    ;
+    color: ;
+}
+
+footer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 14, 0.811);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#inner-footer{
+   
+    width: 70%;
+    height: 90%;
+    padding: 4%;
+    background-color: rgb(0, 0, 0);
+  gap: 40em;
+}
+
+.addedItem{
+    width: 100%;
+margin-top: 10%;
+    height: 2em;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    box-shadow: 0 0 20pt aquamarine;
+    gap: 10%;
+}
+
+.hidden{
+    animation: fadeOut 1s linear;
+    display: none;
+}
+
+
+@keyframes fadeOut {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.addedItem img{
+    width:  2em;
+    border-radius: 2em;
+    height: 2em;
+}
+.addedItem div{
+    display: flex;
+}
+
+.removeMe{
+    border: none;
+    padding: 1%;
+    background-color: blue;
+    color: white;
+}
+
+.removeMe:hover{
+    background-color: #d5d5d5
+    ;
+}
